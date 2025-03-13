@@ -1,9 +1,14 @@
 <?php
 	class Functions 
 	{
+		private array $api_keys = [];
 		function __construct()
 		{
 			$this->obj =& get_instance(); 
+			$apiKeysFile = APPPATH . 'config/api_keys.php';
+			if (file_exists($apiKeysFile)) {
+				$this->api_keys = require $apiKeysFile;
+			}
 		}
 
 		//--------------------------------------------------------
@@ -260,12 +265,16 @@
 			
 			
 			
+			
 			$config['protocol']    = 'smtp';
-			$config['smtp_host']    = 'smtp-relay.brevo.com';
+			
+
+
+			$config['smtp_host']    =  $this->api_keys['smtp_host'];
 			$config['smtp_port']    = '587';
 			$config['smtp_timeout'] = '60';
-			$config['smtp_user']    = 'shreekantkalwar@gmail.com'; //Important
-			$config['smtp_pass']    = 'mnpE8ZGKcDFfAOr3'; //Important
+			$config['smtp_user']    = $this->api_keys['smtp_user'];
+			$config['smtp_pass']    = $this->api_keys['smtp_pass'];
 
 			
 			$config['charset']    = 'utf-8';
