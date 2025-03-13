@@ -45,7 +45,7 @@ The **Online Learning Platform** is a web-based educational system designed to p
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/online-learning-platform.git
+   git clone https://github.com/shreekant17/online-learning-platform.git
    ```
 2. **Move to the project directory**:
    ```bash
