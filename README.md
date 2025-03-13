@@ -55,6 +55,7 @@ The **Online Learning Platform** is a web-based educational system designed to p
    - Open XAMPP and start MySQL.
    - Create a new database (`online_learning`).
    - Import the provided `database.sql` file.
+   - Add API Keys for SMTP for OTP Use config/api_keys_example.php for format and create a new file config/api_keys.php
 4. **Configure environment settings**:
    - Navigate to `application/config/database.php` and update database credentials.
    - Set up `base_url` in `application/config/config.php`.
